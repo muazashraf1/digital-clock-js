@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height:100vh;
+    background-image: url(./imgs/pexels-thngocbich-622164.jpg);
+    /* background-image: linear-gradient(rgba(190, 185, 185, 0.7), rgba(152, 149, 149, 0.7)); */
+    /* background-size: cover; */
+     background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-box{
+    width: 500px;
+    height: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px 10px 50px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 10px 10px 30px black;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* transform: rotateX(50deg); */
+}
+
+.time-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.735);
+}
+
+.time-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.087), transparent);
+      transform: rotate(25deg);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .time-box:hover::before {
+      opacity: 1;
+    }
+
+    /* .time{
+        display: flex;
+        justify-content: center;
+    } */
+
+    h1{
+        text-shadow: 0px 0px 5px greenyellow; 
+        font-size: 60px;
+        -webkit-text-stroke: 1px black;
+        color: transparent;
+        opacity: 0.5;
+        /* margin: 10px 20px 30px 40px ; */
+    }
+
+    h3{
+        text-shadow: 0px 0px 5px greenyellow; 
+        font-size: 50px;
+        -webkit-text-stroke: 1px black;
+        color: transparent;
+        opacity: 0.5;
+        /* margin: 10px 20px 30px 40px ; */
+    }
+
+    .time-box:hover h1 {
+        opacity: 1;
+    }
+    .time-box:hover h3{
+        opacity: 1;
+    }
+
+
+
+
