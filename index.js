@@ -9,7 +9,7 @@ setInterval (() =>{
    let minutes = date.getMinutes();
    let seconds = date.getSeconds();
    let dt = date.getDate();
-   let month = date.getMonth();
+   let month = date.getMonth() + 1;
    let year = date.getFullYear();
 
 //   if(hours >= 12){
@@ -42,9 +42,9 @@ if (minutes < 10){
 if(seconds < 10){
     seconds = "0" + seconds
 }
-// if(month < 10){
-//     month = "0" + month
-// }
+if(month < 10){
+    month = "0" + month
+}
 if(dt < 10){
     dt = "0" + dt
 }
@@ -52,7 +52,7 @@ if(dt < 10){
 
 
 time.innerHTML = `${hours}:${minutes}:${seconds} <sub>${period}</sub>`
-dte.innerHTML = `${month + 1}:${dt}:${year}`
+dte.innerHTML = `${month}:${dt}:${year}`
     
 
 },1000)
